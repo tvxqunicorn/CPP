@@ -1,10 +1,10 @@
-NAME = megaphone
+NAME = Megaphone
 
 CC = clang++
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS = megaphone.cpp
+SRCS = Megaphone.cpp
 
 OBJS = $(SRCS:.cpp = .o)
 

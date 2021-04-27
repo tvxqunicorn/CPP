@@ -1,16 +1,18 @@
-#include "pony.hpp"
+#include "Pony.hpp"
 
-Pony::Pony(std::string const name): name(name)
+Pony::Pony() {}
+
+Pony::Pony(std::string const name): _name(name)
 {
-	std::cout << "Pony was born, we will name it " << this->name << "." << std::endl;
+	std::cout << "Pony was born, we will name it " << this->_name << "." << std::endl;
 }
 
 Pony::~Pony()
 {
-	std::cout << this->name << " died :(" << std::endl;
+	std::cout << this->_name << " died :(" << std::endl;
 }
 
 void	Pony::sayHi()
 {
-	std::cout << "Hello, I am " << this->name << ". Nice to meet you!" << std::endl;
+	std::cout << "Hello, I am " << this->_name << ". Nice to meet you!" << std::endl;
 }

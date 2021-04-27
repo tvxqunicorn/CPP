@@ -1,4 +1,8 @@
-#include "contact.hpp"
+#include "Contact.hpp"
+
+Contact::Contact() {}
+
+Contact::~Contact() {}
 
 void	Contact::setContact()
 {

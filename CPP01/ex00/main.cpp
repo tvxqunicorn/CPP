@@ -1,19 +1,19 @@
-#include "pony.hpp"
+#include "Pony.hpp"
 
 void	ponyOnTheStack()
 {
-	Pony Bob("Bob");
+	Pony	Bob("Bob");
 	Bob.sayHi();
 }
 
 void	ponyOnTheHeap()
 {
-	Pony* Jack = new Pony("Jack");
+	Pony	*Jack = new Pony("Jack");
 	Jack->sayHi();
 	delete Jack;
 }
 
-int main()
+int	main()
 {
 	std::cout << "--- ponyOnTheStack ---" << std::endl;
 	ponyOnTheStack();

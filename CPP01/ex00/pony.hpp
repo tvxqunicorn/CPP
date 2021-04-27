@@ -4,14 +4,19 @@
 # include <iostream>
 # include <string>
 
+class Pony;
+
 class Pony
 {
 	public:
-		std::string	const name;
-		
+		Pony();
 		Pony(std::string const name);
 		virtual	~Pony();
+
 		void	sayHi();
+
+	private:
+		std::string	_name;
 };
 
 #endif

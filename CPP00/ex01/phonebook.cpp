@@ -1,9 +1,11 @@
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook()
 {
 	this->ct = 0;
 }
+
+PhoneBook::~PhoneBook() {}
 
 void	PhoneBook::addContact()
 {
@@ -13,7 +15,7 @@ void	PhoneBook::addContact()
 	{
 		Contact	newContact;
 		newContact.setContact();
-		this->contacts[ct] = newContact;
+		this->_contacts[ct] = newContact;
 		ct++;
 	}
 }
@@ -34,7 +36,7 @@ void	PhoneBook::displayContactfull()
 	if (index <= 0 || index > this->ct)
 		std::cout << "Index out of range" << std::endl;
 	else
-		this->contacts[index - 1].getContact();
+		this->_contacts[index - 1].getContact();
 }
 
 void	PhoneBook::searchContact()
@@ -53,7 +55,7 @@ void	PhoneBook::searchContact()
 	while (index < this->ct)
 	{
 		std::cout << '|' << std::setw(10) << std::right << index + 1;
-		contacts[index].getContactindex();
+		_contacts[index].getContactindex();
 		std::cout << '|' << std::endl;
 		index++;
 	}

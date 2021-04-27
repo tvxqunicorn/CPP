@@ -1,12 +1,12 @@
-NAME = PhoneBook
+NAME = Zombie
 
 CC = clang++
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = Contact.hpp PhoneBook.hpp
+INCLUDES = Zombie.hpp ZombieEvent.hpp
 
-SRCS = Contact.cpp PhoneBook.cpp main.cpp
+SRCS = Zombie.cpp ZombieEvent.cpp main.cpp
 
 OBJS = $(SRCS:.cpp = .o)
 

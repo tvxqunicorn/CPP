@@ -1,12 +1,18 @@
 #ifndef	CONTACT_HPP
 # define CONTACT_HPP
+
 # include <iostream>
 # include <string>
 # include <iomanip>
 
+class Contact;
+
 class Contact
 {
 	public:
+		Contact();
+		virtual ~Contact();
+		
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;

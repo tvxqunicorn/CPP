@@ -1,12 +1,12 @@
-NAME = pony
+NAME = Pony
 
 CC = clang++
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = pony.hpp
+INCLUDES = Pony.hpp
 
-SRCS = pony.cpp main.cpp
+SRCS = Pony.cpp main.cpp
 
 OBJS = $(SRCS:.cpp = .o)
 
