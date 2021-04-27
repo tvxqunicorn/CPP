@@ -8,8 +8,7 @@ void	ponyOnTheStack()
 
 void	ponyOnTheHeap()
 {
-	Pony *Jack;
-	Jack = new Pony("Jack");
+	Pony* Jack = new Pony("Jack");
 	Jack->sayHi();
 	delete Jack;
 }
