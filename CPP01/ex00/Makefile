@@ -8,7 +8,7 @@ INCLUDES = Pony.hpp
 
 SRCS = Pony.cpp main.cpp
 
-OBJS = $(SRCS:.cpp = .o)
+OBJS = $(SRCS:.cpp=.o)
 
 $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
