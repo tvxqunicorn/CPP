@@ -29,7 +29,7 @@ void	Contact::setContact()
 	std::cin >> this->underwear_color;
 	std::cout << "   Darkest secret: ";
 	std::cin >> this->darkest_secret;
-	std::cout << "   New contact added." << std::endl;
+	std::cout << "New contact added." << std::endl;
 }
 
 void	Contact::getContact() const
