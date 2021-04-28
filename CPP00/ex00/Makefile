@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRCS = Megaphone.cpp
 
-OBJS = $(SRCS:.cpp = .o)
+OBJS = $(SRCS:.cpp=.o)
 
 $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
