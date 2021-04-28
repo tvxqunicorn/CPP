@@ -13,4 +13,8 @@ int main()
 	zombie = zombie_event.newZombie("Jack");
 	zombie->announce();
 	delete zombie;
+
+	zombie_event.randomChump();
+	zombie->announce();
+	delete zombie;
 }

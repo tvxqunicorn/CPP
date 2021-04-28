@@ -11,7 +11,7 @@ class PhoneBook
 {
 	public:
 		PhoneBook();
-		virtual ~PhoneBook();
+		~PhoneBook();
 
 		void	addContact();
 		void	searchContact();

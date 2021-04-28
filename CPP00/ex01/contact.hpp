@@ -11,8 +11,8 @@ class Contact
 {
 	public:
 		Contact();
-		virtual ~Contact();
-		
+		~Contact();
+
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;

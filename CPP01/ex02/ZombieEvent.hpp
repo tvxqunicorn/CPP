@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <string>
+# include <ctime>
 # include "Zombie.hpp"
 
 class ZombieEvent;

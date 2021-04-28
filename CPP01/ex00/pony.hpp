@@ -11,7 +11,7 @@ class Pony
 	public:
 		Pony();
 		Pony(std::string const name);
-		virtual	~Pony();
+		~Pony();
 
 		void	sayHi();
 
