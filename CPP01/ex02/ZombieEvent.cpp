@@ -1,7 +1,10 @@
 #include "ZombieEvent.hpp"
 
 //default Construtor
-ZombieEvent::ZombieEvent() {}
+ZombieEvent::ZombieEvent()
+{
+	srand(time(NULL));
+}
 
 ZombieEvent::~ZombieEvent() {}
 
@@ -27,5 +30,14 @@ Zombie	*ZombieEvent::randomChump()
 
 	res = new Zombie(this->_type, names[std::rand() % 10]);
 	res->announce();
+	return (res);
+}
+
+Zombie	*ZombieEvent::randomChump()
+{
+	std::string	names[] = {"Norman", "Misha", "Sherry", "Preston", "Tai", "Hajra", "Bluebell", "Miley", "Cassidy", "Magnus"};
+	Zombie		*res;
+
+	res = new Zombie(this->_type, names[rand() % 10]);
 	return (res);
 }
