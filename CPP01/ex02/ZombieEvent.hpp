@@ -12,6 +12,7 @@ class ZombieEvent
 	public:
 		ZombieEvent();
 		~ZombieEvent();
+		
 		//getter - setter
 		std::string	getZombieType();
 		void	setZombieType(std::string type);

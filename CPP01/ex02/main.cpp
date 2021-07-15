@@ -2,15 +2,14 @@
 
 int main()
 {
-	Zombie		*zombie;
+	Zombie	zombie("Type A", "Bob");
+	zombie.announce();
+
+	Zombie		*new_zombie;
 	ZombieEvent	zombie_event;
 
-	zombie = new Zombie("Type A", "Bob");
-	zombie->announce();
-	delete zombie;
-
 	zombie_event.setZombieType("Type B");
-	zombie = zombie_event.newZombie("Jack");
-	zombie->announce();
-	delete zombie;
+	new_zombie = zombie_event.newZombie("Jack");
+	new_zombie->announce();
+	delete new_zombie;
 }

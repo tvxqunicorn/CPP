@@ -13,6 +13,7 @@ class Zombie
 		~Zombie();
 
 		void	announce();
+		
 		//getter - setter
 		std::string	getType();
 		void	setType(std::string type);
