@@ -35,13 +35,15 @@ Account::Account(int initial_deposit)
 
 Account::~Account()
 {
+	this->_nbAccounts--;
+
 	Account::_displayTimestamp();
 	std::cout << " index:" << this->_accountIndex << ";"
 			<< "amount:" << this->_amount << ";"
 			<< "closed" << std::endl;
 }
 
-void	Account::_displayTimestamp(void)
+void	Account::_displayTimestamp(void) //[19920104_091532]
 {
 	std::time_t	t = time(0); //date & time base on the system
 	std::tm		*now = localtime(&t);
@@ -52,8 +54,16 @@ void	Account::_displayTimestamp(void)
 	std::cout << (now->tm_mon + 1);
 	if (now->tm_mday < 10)
 		std::cout << "0";
-	std::cout << now->tm_mday << "_"
-			<< now->tm_hour << now->tm_min << now->tm_sec << "]"; //[19920104_091532]
+	std::cout << now->tm_mday << "_";
+	if (now->tm_hour < 10)
+		std::cout << "0";
+	std::cout << now->tm_hour;
+	if (now->tm_min < 10)
+		std::cout << "0";
+	std::cout << now->tm_min;
+	if (now->tm_sec < 10)
+		std::cout << "0";
+	std::cout << now->tm_sec << "]";
 }
 
 int	Account::getNbAccounts(void)
