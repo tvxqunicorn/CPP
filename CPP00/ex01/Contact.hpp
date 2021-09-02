@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/01 13:20:16 by xli               #+#    #+#             */
+/*   Updated: 2021/09/01 13:20:18 by xli              ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef	CONTACT_HPP
 # define CONTACT_HPP
 
@@ -16,13 +28,7 @@ class Contact
 		std::string	first_name;
 		std::string	last_name;
 		std::string	nickname;
-		std::string	login;
-		std::string	postal_address;
-		std::string	email_address;
 		std::string	phone_number;
-		std::string	birthday_date;
-		std::string	favorite_meal;
-		std::string	underwear_color;
 		std::string	darkest_secret;
 
 		void	limitwidth(std::string str, int width);

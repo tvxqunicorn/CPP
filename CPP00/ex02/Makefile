@@ -5,20 +5,20 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/01 13:20:31 by xli               #+#    #+#              #
-#    Updated: 2021/09/01 13:20:33 by xli              ###   ########lyon.fr    #
+#    Created: 2021/09/01 13:19:19 by xli               #+#    #+#              #
+#    Updated: 2021/09/01 13:21:59 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = PhoneBook
+NAME = Account
 
 CC = clang++
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = Contact.hpp PhoneBook.hpp
+INCLUDES = Account.hpp
 
-SRCS = Contact.cpp PhoneBook.cpp main.cpp
+SRCS = Account.cpp tests.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
