@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 11:26:08 by xli               #+#    #+#             */
-/*   Updated: 2021/09/03 11:44:48 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/03 11:27:00 by xli               #+#    #+#             */
+/*   Updated: 2021/09/03 11:47:17 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie	*newZombie(std::string name);
-void	randomChump(std::string name);
+//Constructor
+Zombie::Zombie(std::string name): _name(name) {}
 
-int main()
+//Destructor
+Zombie::~Zombie()
 {
-	Zombie	zombieA("Bob");
-	zombieA.announce();
+	std::cout << "<" << _name << ">" << " is dead" << std::endl;
+}
 
-	Zombie	*zombieB = newZombie("Jack");
-	zombieB->announce();
-
-	randomChump("Mike");
-
-	delete zombieB;
-	return (0);
+void	Zombie::announce()
+{
+	std::cout << "<" << _name << ">" << " Braiiiiiiinnnssss..." << std::endl;
 }

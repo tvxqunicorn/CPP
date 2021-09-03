@@ -1,12 +1,24 @@
-NAME = Pony
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
+#    Updated: 2021/09/03 11:42:54 by xli              ###   ########lyon.fr    #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = Zombie
 
 CC = clang++
 
 CFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = Pony.hpp
+INCLUDES = Zombie.hpp
 
-SRCS = Pony.cpp main.cpp
+SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
