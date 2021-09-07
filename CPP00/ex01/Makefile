@@ -6,15 +6,15 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 13:20:31 by xli               #+#    #+#              #
-#    Updated: 2021/09/01 13:20:33 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/07 14:16:21 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = PhoneBook
 
-CC = clang++
+CXX = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 INCLUDES = Contact.hpp PhoneBook.hpp
 
@@ -22,8 +22,11 @@ SRCS = Contact.cpp PhoneBook.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 all : $(NAME)
 

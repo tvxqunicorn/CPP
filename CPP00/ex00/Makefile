@@ -6,23 +6,26 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/01 13:19:44 by xli               #+#    #+#              #
-#    Updated: 2021/09/01 13:19:47 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/07 14:20:09 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 
-CC = clang++
+CXX = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS = megaphone.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-$(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(NAME) : $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+	
 all : $(NAME)
 
 clean :
