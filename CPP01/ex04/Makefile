@@ -6,22 +6,25 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/05 10:46:49 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/07 15:25:22 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Whatever
 
-CC = clang++
+CXX = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 all : $(NAME)
 

@@ -6,15 +6,15 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/03 11:42:54 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/07 15:19:32 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Zombie
 
-CC = clang++
+CXX = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 INCLUDES = Zombie.hpp
 
@@ -22,8 +22,11 @@ SRCS = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 $(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 all : $(NAME)
 

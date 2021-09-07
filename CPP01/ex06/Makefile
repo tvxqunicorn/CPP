@@ -6,15 +6,15 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/05 15:42:28 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/07 15:26:10 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = karenFilter
 
-CC = clang++
+CXX = clang++
 
-CFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror
 
 INCLUDES = Karen.hpp
 
@@ -22,9 +22,12 @@ SRCS = Karen.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-$(NAME) : $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+%.o : %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(NAME) : $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+	
 all : $(NAME)
 
 clean :
