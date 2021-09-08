@@ -6,11 +6,11 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/07 15:25:22 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/08 10:34:27 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Whatever
+NAME = Replace
 
 CXX = clang++
 
