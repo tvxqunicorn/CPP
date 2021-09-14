@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/08 11:27:43 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 12:25:26 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 09:35:09 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 09:37:48 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
+# include "Animal.hpp"
 # include <iostream>
 
-class Fixed;
-
-class Fixed
+class Dog : public Animal
 {
-	private:
-		int					_fixed_point;
-		static const int	_frac_bits = 8;
-
 	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		~Fixed();
+		Dog();
+		Dog(const Dog &copy);
+		~Dog();
 
-		Fixed	&operator=(const Fixed &copy);
-		int		getRawBits(void) const;
-		void	setRawBits(const int raw);
+		Dog	&operator=(const Dog &copy);
+
+		std::string	getType(std::string type);
+		void		setType();
 };
 
 #endif

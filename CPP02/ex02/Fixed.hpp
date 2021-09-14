@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:27:43 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 11:52:04 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/13 12:25:48 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,41 +20,41 @@ class Fixed;
 
 class Fixed
 {
-private:
-	int					_fixed_point;
-	static const int	_frac_bits = 8;
+	private:
+		int					_fixed_point;
+		static const int	_frac_bits = 8;
 
-public:
-	Fixed();
-	Fixed(const int N);
-	Fixed(const float F);
-	Fixed(const Fixed &copy);
-	~Fixed();
+	public:
+		Fixed();
+		Fixed(const int N);
+		Fixed(const float F);
+		Fixed(const Fixed &copy);
+		~Fixed();
 
-	int		getRawBits(void) const;
-	void	setRawBits(const int raw);
-	float	toFloat(void) const;
-	int		toInt(void) const;
-	Fixed	&operator=(const Fixed &copy);
-	bool	operator>(const Fixed &copy);
-	bool	operator<(const Fixed &copy);
-	bool	operator>=(const Fixed &copy);
-	bool	operator<=(const Fixed &copy);
-	bool	operator==(const Fixed &copy);
-	bool	operator!=(const Fixed &copy);
-	Fixed	operator+(const Fixed &copy) const;
-	Fixed	operator-(const Fixed &copy) const;
-	Fixed	operator*(const Fixed &copy) const;
-	Fixed	operator/(const Fixed &copy) const;
-	Fixed	&operator++();
-	Fixed	operator++(int);
-	Fixed	&operator--();
-	Fixed	operator--(int);
+		int		getRawBits(void) const;
+		void	setRawBits(const int raw);
+		float	toFloat(void) const;
+		int		toInt(void) const;
+		Fixed	&operator=(const Fixed &copy);
+		bool	operator>(const Fixed &copy);
+		bool	operator<(const Fixed &copy);
+		bool	operator>=(const Fixed &copy);
+		bool	operator<=(const Fixed &copy);
+		bool	operator==(const Fixed &copy);
+		bool	operator!=(const Fixed &copy);
+		Fixed	operator+(const Fixed &copy) const;
+		Fixed	operator-(const Fixed &copy) const;
+		Fixed	operator*(const Fixed &copy) const;
+		Fixed	operator/(const Fixed &copy) const;
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
 
-	static Fixed		&min(Fixed &f1, Fixed &f2);
-	static Fixed const	&min(Fixed const &f1, Fixed const &f2);
-	static Fixed		&max(Fixed &f1, Fixed &f2);
-	static Fixed const	&max(Fixed const &f1, Fixed const &f2);
+		static Fixed		&min(Fixed &f1, Fixed &f2);
+		static Fixed const	&min(Fixed const &f1, Fixed const &f2);
+		static Fixed		&max(Fixed &f1, Fixed &f2);
+		static Fixed const	&max(Fixed const &f1, Fixed const &f2);
 };
 
 std::ostream	&operator<<(std::ostream &o, const Fixed &srcs);
