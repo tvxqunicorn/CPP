@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 09:22:47 by xli               #+#    #+#              #
-#    Updated: 2021/09/14 09:23:28 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/14 10:02:20 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CXX = clang++
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-INCLUDES = Animal.hpp
+INCLUDES = Animal.hpp WrongAnimal.hpp Dog.hpp Cat.hpp WrongCat.hpp
 
-SRCS = Animal.cpp main.cpp
+SRCS = Animal.cpp WrongAnimal.cpp Dog.cpp Cat.cpp WrongCat.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

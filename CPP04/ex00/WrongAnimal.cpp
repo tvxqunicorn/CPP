@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 09:28:52 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 10:55:41 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 09:56:09 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 10:56:51 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 /*
 ** -------------------- CONSTRUCTOR --------------------
 */
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-	std::cout << "Default constructor from Animal called" << std::endl;
+	std::cout << "Default constructor from WrongAnimal called" << std::endl;
 }
 
-Animal::Animal(const Animal &copy) : _type(copy._type)
+WrongAnimal::WrongAnimal(const WrongAnimal &copy) : _type(copy._type)
 {
-	std::cout << "Copy constructor from Animal called" << std::endl;
+	std::cout << "Copy constructor from WrongAnimal called" << std::endl;
 }
 
 /*
 ** -------------------- DESTRUCTOR --------------------
 */
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Default destructor from Animal called" << std::endl;
+	std::cout << "Default destructor from WrongAnimal called" << std::endl;
 }
 
 /*
 ** -------------------- OVERLOADING --------------------
 */
 
-Animal	&Animal::operator=(const Animal &copy)
+WrongAnimal	&WrongAnimal::operator=(const WrongAnimal &copy)
 {
 	if (this == &copy)
 		return (*this);
@@ -51,17 +51,17 @@ Animal	&Animal::operator=(const Animal &copy)
 ** -------------------- MEMBER FUNCTIONS --------------------
 */
 
-std::string	Animal::getType() const
+std::string	WrongAnimal::getType() const
 {
 	return (_type);
 }
 
-void		Animal::setType(std::string type)
+void		WrongAnimal::setType(std::string type)
 {
 	_type = type;
 }
 
-void		Animal::makeSound() const
+void		WrongAnimal::makeSound()
 {
-	std::cout << "Hi I'm an Animal" << std::endl;
+	std::cout << "Hi, I'm a Wrong Animal" << std::endl;
 }

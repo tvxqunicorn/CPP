@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:24:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 09:31:50 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/14 10:55:37 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,13 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal &copy);
-		~Animal();
+		virtual ~Animal();
 
 		Animal	&operator=(const Animal &copy);
+
+		std::string		getType() const;
+		void			setType(std::string type);
+		virtual void	makeSound() const;
 };
 
 #endif

@@ -1,45 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 09:28:52 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 10:55:41 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 09:49:51 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 10:24:22 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
 
 /*
 ** -------------------- CONSTRUCTOR --------------------
 */
 
-Animal::Animal()
+Cat::Cat() : Animal()
 {
-	std::cout << "Default constructor from Animal called" << std::endl;
+	_type = "Cat";
+	std::cout << "Default constructor from Cat called" << std::endl;
 }
 
-Animal::Animal(const Animal &copy) : _type(copy._type)
+Cat::Cat(const Cat &copy) : Animal(copy)
 {
-	std::cout << "Copy constructor from Animal called" << std::endl;
+	std::cout << "Copy constructor from Cat called" << std::endl;
 }
 
 /*
 ** -------------------- DESTRUCTOR --------------------
 */
 
-Animal::~Animal()
+Cat::~Cat()
 {
-	std::cout << "Default destructor from Animal called" << std::endl;
+	std::cout << "Default destructor from Cat called" << std::endl;
 }
 
 /*
 ** -------------------- OVERLOADING --------------------
 */
 
-Animal	&Animal::operator=(const Animal &copy)
+Cat	&Cat::operator=(const Cat &copy)
 {
 	if (this == &copy)
 		return (*this);
@@ -48,20 +50,11 @@ Animal	&Animal::operator=(const Animal &copy)
 }
 
 /*
-** -------------------- MEMBER FUNCTIONS --------------------
+** -------------------- MEMBER FUNCTION --------------------
 */
 
-std::string	Animal::getType() const
+void	Cat::makeSound() const
 {
-	return (_type);
+	std::cout << "Meow meow!" << std::endl;
 }
 
-void		Animal::setType(std::string type)
-{
-	_type = type;
-}
-
-void		Animal::makeSound() const
-{
-	std::cout << "Hi I'm an Animal" << std::endl;
-}
