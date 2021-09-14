@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:23:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:00:13 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/14 11:43:49 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,6 @@ int main()
 	delete i;
 	//delete wrongMeta;
 	delete wrongI;
+
+	return (0);
 }

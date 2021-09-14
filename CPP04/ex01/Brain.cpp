@@ -1,60 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 09:42:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:41:47 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 11:35:35 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 12:04:30 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
+#include "Brain.hpp"
 
 /*
 ** -------------------- CONSTRUCTOR --------------------
 */
 
-Dog::Dog() : Animal()
+Brain::Brain()
 {
-	_type = "Dog";
-	std::cout << "Default constructor from Dog called" << std::endl;
+	std::cout << "Default constructor from Brain called" << std::endl;
 }
 
-Dog::Dog(const Dog &copy) : Animal(copy)
+Brain::Brain(const Brain &copy)
 {
-	std::cout << "Copy constructor from Dog called" << std::endl;
+	*this = copy;
+	std::cout << "Copy constructor from Brain called" << std::endl;
 }
 
 /*
 ** -------------------- DESTRUCTOR --------------------
 */
 
-Dog::~Dog()
+Brain::~Brain()
 {
-	std::cout << "Default destructor from Dog called" << std::endl;
+	std::cout << "Default destructor from Brain called" << std::endl;
 }
 
 /*
 ** -------------------- OVERLOADING --------------------
 */
 
-Dog	&Dog::operator=(const Dog &copy)
+Brain	&Brain::operator=(const Brain &copy)
 {
-	std::cout << "Assignation operator from Dog called" << std::endl;
+	std::cout << "Assignation operator from Brain called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_type = copy._type;
+	for (int i = 0; i < 100; i++)
+		_ideas[i] = copy._ideas[i];
 	return (*this);
-}
-
-/*
-** -------------------- MEMBER FUNCTION --------------------
-*/
-
-void	Dog::makeSound() const
-{
-	std::cout << "Woof woof!" << std::endl;
 }

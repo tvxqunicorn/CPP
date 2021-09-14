@@ -1,49 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 09:59:18 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:42:18 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 09:42:48 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 12:07:01 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
+#include "Dog.hpp"
 
 /*
 ** -------------------- CONSTRUCTOR --------------------
 */
 
-WrongCat::WrongCat() : WrongAnimal()
+Dog::Dog() : Animal()
 {
-	_type = "WrongCat";
-	std::cout << "Default constructor from WrongCat called" << std::endl;
+	_type = "Dog";
+	_brain = new Brain();
+	std::cout << "Default constructor from Dog called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy)
+Dog::Dog(const Dog &copy) : Animal(copy)
 {
-	std::cout << "Copy constructor from WrongCat called" << std::endl;
+	std::cout << "Copy constructor from Dog called" << std::endl;
 }
 
 /*
 ** -------------------- DESTRUCTOR --------------------
 */
 
-WrongCat::~WrongCat()
+Dog::~Dog()
 {
-	std::cout << "Default destructor from WrongCat called" << std::endl;
+	delete _brain;
+	std::cout << "Default destructor from Dog called" << std::endl;
 }
 
 /*
 ** -------------------- OVERLOADING --------------------
 */
 
-WrongCat	&WrongCat::operator=(const WrongCat &copy)
+Dog	&Dog::operator=(const Dog &copy)
 {
-	std::cout << "Assignation operator from WrongCat called" << std::endl;
+	std::cout << "Assignation operator from Dog called" << std::endl;
 	if (this == &copy)
 		return (*this);
 	_type = copy._type;
@@ -54,8 +57,12 @@ WrongCat	&WrongCat::operator=(const WrongCat &copy)
 ** -------------------- MEMBER FUNCTION --------------------
 */
 
-void	WrongCat::makeSound()
+void	Dog::makeSound() const
 {
-	std::cout << "Cocorico cocorico!" << std::endl;
+	std::cout << "Woof woof!" << std::endl;
 }
 
+void	Dog::haveIdeas() const
+{
+	std::cout << "I want bones" << std::endl;
+}

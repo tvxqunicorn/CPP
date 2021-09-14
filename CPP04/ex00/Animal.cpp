@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:28:52 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 10:55:41 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/14 11:41:15 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ Animal::Animal()
 	std::cout << "Default constructor from Animal called" << std::endl;
 }
 
-Animal::Animal(const Animal &copy) : _type(copy._type)
+Animal::Animal(const Animal &copy)
 {
+	*this = copy;
 	std::cout << "Copy constructor from Animal called" << std::endl;
 }
 
@@ -41,6 +42,7 @@ Animal::~Animal()
 
 Animal	&Animal::operator=(const Animal &copy)
 {
+	std::cout << "Assignation operator from Animal called" << std::endl;
 	if (this == &copy)
 		return (*this);
 	_type = copy._type;

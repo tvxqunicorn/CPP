@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:24:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 12:20:39 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/14 12:20:55 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class Animal
 		std::string		getType() const;
 		void			setType(std::string type);
 		virtual void	makeSound() const;
+		virtual void	haveIdeas() const;
 };
 
 #endif

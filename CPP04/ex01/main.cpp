@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 09:24:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 12:20:39 by xli              ###   ########lyon.fr   */
+/*   Created: 2021/09/14 09:23:37 by xli               #+#    #+#             */
+/*   Updated: 2021/09/14 12:26:12 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Animal.hpp"
+#include "Brain.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include <iostream>
 
-# include <iostream>
-
-class Animal
+int main()
 {
-	protected:
-		std::string	_type;
+	Animal *a[4];
 
-	public:
-		Animal();
-		Animal(const Animal &copy);
-		virtual ~Animal();
+	for (int i = 0; i < 4; i++)
+	{
+		if (i < 4 / 2)
+			a[i] = new Dog();
+		else
+			a[i] = new Cat();
+		std::cout << "[" << i << "] ";
+		a[i]->makeSound();
+		std::cout << "[" << i << "] ";
+		a[i]->haveIdeas();
+	}
+	for (int i = 0; i < 4; i++)
+		delete a[i];
 
-		Animal	&operator=(const Animal &copy);
-
-		std::string		getType() const;
-		void			setType(std::string type);
-		virtual void	makeSound() const;
-};
-
-#endif
+	return (0);
+}
