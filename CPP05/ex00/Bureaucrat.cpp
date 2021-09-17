@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:05:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/17 09:14:22 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/17 14:40:53 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,33 @@ Bureaucrat::Bureaucrat(const std::string name, const int grade) : _name(name)
 {
 	if (grade < 1)
 		throw (GradeTooHighException());
-	else if (grade > 150)
+	if (grade > 150)
 		throw (GradeTooLowException());
 	_grade = grade;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name), _grade(copy._grade) {}
+Bureaucrat::Bureaucrat(const Bureaucrat &copy) : _name(copy._name)
+{
+	if (copy._grade < 1)
+		throw (GradeTooHighException());
+	if (copy._grade > 150)
+		throw (GradeTooLowException());
+	_grade = copy._grade;
+}
 
 Bureaucrat::~Bureaucrat() {}
+
+Bureaucrat	&Bureaucrat::operator=(const Bureaucrat &copy)
+{
+	if (this == &copy)
+		return (*this);
+	if (copy._grade < 1)
+		throw (GradeTooHighException());
+	if (copy._grade > 150)
+		throw (GradeTooLowException());
+	_grade = copy._grade;
+	return (*this);
+}
 
 std::string	Bureaucrat::getName() const
 {
@@ -34,6 +53,10 @@ std::string	Bureaucrat::getName() const
 
 int	Bureaucrat::getGrade() const
 {
+	if (_grade < 1)
+		throw (GradeTooHighException());
+	if (_grade > 150)
+		throw (GradeTooLowException());
 	return (_grade);
 }
 

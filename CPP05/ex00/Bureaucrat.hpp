@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 11:14:51 by xli               #+#    #+#             */
-/*   Updated: 2021/09/17 09:20:15 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/17 14:26:29 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Bureaucrat
 		Bureaucrat(const Bureaucrat &copy);
 		~Bureaucrat();
 
-		Bureaucrat	operator=(const Bureaucrat &copy);
+		Bureaucrat	&operator=(const Bureaucrat &copy);
 
 		std::string	getName() const;
 		int			getGrade() const;
