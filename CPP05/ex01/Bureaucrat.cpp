@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:05:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 10:04:57 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 14:53:10 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void	Bureaucrat::signForm(Form &form)
 	{
 		std::cout << getName() << " cannot sign " << form.getName()
 				<< " because his/her grade is too low" << std::endl;
+		form.beSigned(*this);
 	}
 	else
 	{
