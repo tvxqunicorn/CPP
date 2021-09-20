@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:08:32 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 13:56:19 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 15:13:06 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int main()
 {
-
-/*
-** -------------------- CONSTRUCTOR EXCEPTIONS --------------------
-*/
+	std::cout << "------------ Constructor Exceptions ------------" << std::endl;
 
 	try
 	{
@@ -41,9 +38,7 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
-/*
-** -------------------- GRADE CHANGING EXCEPTIONS --------------------
-*/
+	std::cout << "------------ Grand Changing Exceptions ------------" << std::endl;
 
 	try
 	{
@@ -71,9 +66,7 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
-/*
-** -------------------- COPY --------------------
-*/
+	std::cout << "------------ Copy ------------" << std::endl;
 
 	try
 	{
