@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/16 11:13:09 by xli               #+#    #+#              #
-#    Updated: 2021/09/16 11:13:42 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/20 09:41:40 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = Bureaucrat.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o : %.cpp
+%.o : %.cpp $(INCLUDES)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)
