@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:08:32 by xli               #+#    #+#             */
-/*   Updated: 2021/09/17 15:10:26 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 13:56:19 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ int main()
 
 		std::cout << Timmy << "; " << Michelle << std::endl;
 		Michelle = Timmy;
+		std::cout << "Copying... " << std::endl;
 		std::cout << Timmy << "; " <<Michelle << std::endl;
 	}
 	catch (std::exception &e)
