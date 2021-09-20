@@ -6,82 +6,99 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:08:32 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 11:57:24 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 16:39:04 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
 
-/*
-** -------------------- CONSTRUCTOR EXCEPTIONS --------------------
-*/
+	std::cout << "------------ Shrubbery Creation Form ------------" << std::endl;
 
 	try
 	{
-		Bureaucrat				Joe("Joe", 2);
-		ShrubberyCreationForm	FormA("Office");
+		Bureaucrat				Jane("Joe", 10);
+		ShrubberyCreationForm	FormA("Form A");
 
-		Joe.executeForm(FormA);
+		std::cout << Jane << std::endl;
+		std::cout << FormA << std::endl;
+		Jane.executeForm(FormA);
+		Jane.signForm(FormA);
 	}
 	catch (std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
 
-// /*
-// ** -------------------- GRADE CHANGING EXCEPTIONS --------------------
-// */
-// 	try
-// 	{
-// 		Bureaucrat	Poppy("Poppy", 10);
-// 		Form		FormB("FormB", 9, 1);
+	try
+	{
+		Bureaucrat				Joe("Joe", 140);
+		ShrubberyCreationForm	FormB("Form B");
 
-// 		Poppy.signForm(FormB);
-// 		std::cout << "Incrementing... " << std::endl;
-// 		Poppy.upGrade();
-// 		Poppy.signForm(FormB);
-// 	}
-// 	catch(std::exception& e)
-// 	{
-// 		std::cerr << e.what() << std::endl;
-// 	}
+		std::cout << Joe << std::endl;
+		std::cout << FormB << std::endl;
+		Joe.signForm(FormB);
+		Joe.executeForm(FormB);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-// 	try
-// 	{
-// 		Bureaucrat	Zoe("Zoe", 9);
-// 		Form		FormC("FormC", 9, 1);
+	try
+	{
+		Bureaucrat				Jane("Joe", 137);
+		ShrubberyCreationForm	FormC("Form C");
 
-// 		std::cout << "Decrementing... " << std::endl;
-// 		Zoe.downGrade();
-// 		Zoe.signForm(FormC);
-// 	}
-// 	catch(std::exception& e)
-// 	{
-// 		std::cerr << e.what() << std::endl;
-// 	}
+		std::cout << Jane << std::endl;
+		std::cout << FormC << std::endl;
+		Jane.signForm(FormC);
+		Jane.executeForm(FormC);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-// /*
-// ** -------------------- COPY --------------------
-// */
-// 	try
-// 	{
-// 		Bureaucrat	Timmy("Timmy", 10);
-// 		Bureaucrat	Michelle("Michelle", 20);
-// 		Form		FormD("FormD", 10, 1);
+	std::cout << "------------ Robotomy Request Form ------------" << std::endl;
 
-// 		Michelle.signForm(FormD);
-// 		Michelle = Timmy;
-// 		Michelle.signForm(FormD);
-// 	}
-// 	catch(std::exception& e)
-// 	{
-// 		std::cerr << e.what() << std::endl;
-// 	}
+	try
+	{
+		Bureaucrat			Mike("Mike", 10);
+		RobotomyRequestForm	FormD("Form D");
+
+		std::cout << Mike << std::endl;
+		std::cout << FormD << std::endl;
+		Mike.signForm(FormD);
+		Mike.executeForm(FormD);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << "------------ Presidential Pardon Form ------------" << std::endl;
+
+	try
+	{
+		Bureaucrat				Michelle("Michelle", 1);
+		PresidentialPardonForm	FormE("Form E");
+
+		std::cout << Michelle << std::endl;
+		std::cout << FormE << std::endl;
+		Michelle.signForm(FormE);
+		Michelle.executeForm(FormE);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/16 11:13:09 by xli               #+#    #+#              #
-#    Updated: 2021/09/20 12:02:21 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/20 16:32:27 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,10 +17,10 @@ CXX = clang++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 INCLUDES = Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp \
-		#RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+		RobotomyRequestForm.hpp PresidentialPardonForm.hpp
 
 SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-		#RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+		RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

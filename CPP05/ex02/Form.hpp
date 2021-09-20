@@ -6,15 +6,15 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:33:53 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 11:58:28 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 14:23:03 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 # define FORM_HPP
 
-# include "Bureaucrat.hpp"
 # include <iostream>
+# include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
@@ -30,16 +30,17 @@ class Form
 		Form();
 		Form(const std::string name, const int signGrade, const int execGrade);
 		Form(const Form &copy);
-		~Form();
+		virtual ~Form(); //???
 
 		//Form &operator=(const Form &copy);
 
-		std::string	getName() const;
-		bool		getSigned() const;
-		int			getSignGrade() const;
-		int			getExecGrade() const;
-		void		beSigned(Bureaucrat &b);
-		void		excute(Bureaucrat const &executor) const;
+		std::string		getName() const;
+		bool			getSigned() const;
+		int				getSignGrade() const;
+		int				getExecGrade() const;
+		void			beSigned(Bureaucrat &b);
+		void			excute(Bureaucrat const &executor) const;
+		virtual void	action() const = 0;
 
 		class GrandTooHighException : public std::exception
 		{
@@ -70,6 +71,6 @@ class Form
 
 };
 
-std::ostream &operator<<(std::ostream &os, Form &srcs);
+std::ostream &operator<<(std::ostream &os, const Form &srcs);
 
 #endif

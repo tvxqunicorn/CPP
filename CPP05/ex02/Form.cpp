@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 11:39:25 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 14:20:09 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void	Form::excute(Bureaucrat const &executor) const
 	{
 		throw (Bureaucrat::GradeTooLowException());
 	}
+	action();
 }
 
 std::ostream &operator<<(std::ostream &os, const Form &srcs)

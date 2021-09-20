@@ -6,15 +6,13 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 10:40:22 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 11:58:56 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 16:26:51 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm() {}
+//ShrubberyCreationForm::ShrubberyCreationForm() {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : Form(target, 145, 137), _target(target) {}
 
@@ -34,14 +32,15 @@ void	ShrubberyCreationForm::action() const
 
 	outfile.open((getName() + "_shrubbery"), std::ios::out | std::ios::trunc);
 	outfile <<
-	"888 \n"
-	"888 \n"
-	"888 \n"
-	"888888888d888 .d88b.  .d88b. \n"
-	"888   888P   d8P  Y8bd8P  Y8b \n"
-	"888   888    8888888888888888 \n"
-	"Y88b. 888    Y8b.    Y8b. \n"
-	"  Y888888      Y8888   Y8888 \n" << std::endl;
+	"  888 \n"
+	"  888 \n"
+	"  888 \n"
+	"88888888888d888 .d88b.  .d88b. \n"
+	"  888   888P   d8P  Y8bd8P  Y8b \n"
+	"  888   888    8888888888888888 \n"
+	"  Y88b. 888    Y8b.    Y8b. \n"
+	"    Y888888      Y8888   Y8888 \n" << std::endl;
 
 	outfile.close();
+	std::cout << "File created" << std::endl;
 }

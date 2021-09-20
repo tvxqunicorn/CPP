@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 13:05:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 11:36:04 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 15:11:23 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void	Bureaucrat::signForm(Form &form)
 	{
 		std::cout << getName() << " cannot sign " << form.getName()
 				<< " because his/her grade is too low" << std::endl;
+		form.beSigned(*this);
 	}
 	else
 	{
@@ -108,12 +109,13 @@ void	Bureaucrat::executeForm(Form const &form)
 	{
 		std::cout << getName() << " cannot execute " << form.getName()
 				<< " because it hasn't been signed" << std::endl;
+		form.excute(*this);
 	}
 	else if (getGrade() > form.getExecGrade())
 	{
 		std::cout << getName() << " cannot execute " << form.getName()
 				<< " because his/her grade is too low" << std::endl;
-		//form.excute(*this); //???
+		form.excute(*this);
 	}
 	else
 	{
