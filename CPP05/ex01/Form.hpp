@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:33:53 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 09:47:48 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 13:47:26 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ class Form
 		};
 };
 
-std::ostream &operator<<(std::ostream &os, Form &srcs);
+std::ostream &operator<<(std::ostream &os, const Form &srcs);
 
 #endif

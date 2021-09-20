@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/17 15:40:25 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/20 13:48:59 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void	Form::beSigned(Bureaucrat &bureau)
 
 std::ostream &operator<<(std::ostream &os, const Form &srcs)
 {
-	os << srcs.getName() << " grade to sign: " << srcs.getSignGrade()
-		<< " grade to execute: " << srcs.getExecGrade();
+	os << srcs.getName() << " grade to sign: " << srcs.getSignGrade() << "; "
+		<< "grade to execute: " << srcs.getExecGrade();
 	return (os);
 }
