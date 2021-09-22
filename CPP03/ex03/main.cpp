@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:45:24 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:24:55 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:46:26 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main()
 	diamondTrap1.attack("Harper");
 	diamondTrap1.takeDamage(12);
 	diamondTrap1.beRepaired(100);
+	diamondTrap1.whoAmI();
 
 	return (0);
 }
