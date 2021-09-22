@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 16:41:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/03 16:49:41 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 13:17:18 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	HumanB::attack()
 
 void	HumanB::setWeapon(Weapon &weapon)
 {
-	_weapon = &weapon; //??????
+	_weapon = &weapon;
 }

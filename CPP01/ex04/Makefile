@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/08 10:34:27 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/22 13:16:23 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o : %.cpp
+%.o : %.cpp $(INCLUDES)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)

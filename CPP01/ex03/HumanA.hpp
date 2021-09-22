@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 16:20:33 by xli               #+#    #+#             */
-/*   Updated: 2021/09/03 16:36:20 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 13:17:13 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ class HumanA;
 class HumanA
 {
 	public:
-		HumanA(std::string name, Weapon &weapon); //why &weapon???
+		HumanA(std::string name, Weapon &weapon);
 		~HumanA();
 
 		void	attack();
 
 	private:
 		std::string	_name;
-		Weapon		&_weapon; //why &_weapon???
+		Weapon		&_weapon;
 };
 
 #endif

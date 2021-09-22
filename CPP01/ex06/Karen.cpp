@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 14:00:44 by xli               #+#    #+#             */
-/*   Updated: 2021/09/05 16:11:27 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 13:25:23 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Karen::~Karen() {}
 
 void	Karen::complain(std::string level)
 {
-	int	i;
+	int			i = 0;
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	while (i < 4 && levels[i] != level)
