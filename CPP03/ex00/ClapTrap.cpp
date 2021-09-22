@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:33:01 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 17:40:44 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 14:55:21 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ClapTrap::ClapTrap() : _name("John"), _hitpoints(10), _energyPoints(10), _attack
 	std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energyPoints(10), _attackDamage(0)
 {
 	std::cout << "String constructor from ClapTrap called" << std::endl;
 }
@@ -69,12 +69,13 @@ void		ClapTrap::attack(std::string const &target)
 void		ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << _name << " takes " << amount << " points of damage!" << std::endl;
-	_energyPoints -= amount;
-	if (_energyPoints < 0)
+	if (_energyPoints <= amount)
 	{
 		std::cout << _name << " is dead" << std::endl;
 		_energyPoints = 0;
 	}
+	else
+		_energyPoints -= amount;
 }
 void		ClapTrap::beRepaired(unsigned int amount)
 {
