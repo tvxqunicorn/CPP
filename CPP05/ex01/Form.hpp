@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:33:53 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 13:47:26 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 18:24:01 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form
 		Form(const Form &copy);
 		~Form();
 
-		//Form &operator=(const Form &copy);
+		// Form &operator=(const Form &copy);
 
 		std::string	getName() const;
 		bool		getSigned();

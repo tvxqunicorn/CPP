@@ -6,13 +6,11 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 13:48:59 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 18:46:19 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
-//Form::Form() {}
 
 Form::Form(const std::string name, const int signGrade, const int execGrade) :
 	_name(name),
@@ -32,26 +30,25 @@ Form::Form(const Form &copy) :
 	_signGrade(copy._signGrade),
 	_execGrade(copy._execGrade)
 {
-	if (copy._signGrade < 1 || copy._execGrade < 1)
-		throw (GrandTooHighException());
-	if (copy._signGrade > 150 || copy._execGrade > 150)
-		throw (GrandTooLowException());
+	// if (copy._signGrade < 1 || copy._execGrade < 1)
+	// 	throw (GrandTooHighException());
+	// if (copy._signGrade > 150 || copy._execGrade > 150)
+	// 	throw (GrandTooLowException());
 }
 
 Form::~Form() {}
 
-// Form	&Form::operator=(const Form &copy)
-// {
-// 	if (this == &copy)
-// 		return (*this);
-// 	if (copy._signGrade < 1 || copy._execGrade < 1)
-// 		throw (GrandTooHighException());
-// 	if (copy._signGrade > 150 || copy._execGrade > 150)
-// 		throw (GrandTooLowException());
-// 	_signGrade = copy._signGrade;
-// 	_execGrade = copy._execGrade;
-// 	return (*this);
-// }
+Form	&Form::operator=(const Form &copy)
+{
+	if (this == &copy)
+		return (*this);
+	// if (copy._signGrade < 1 || copy._execGrade < 1)
+	// 	throw (GrandTooHighException());
+	// if (copy._signGrade > 150 || copy._execGrade > 150)
+	// 	throw (GrandTooLowException());
+	_isSigned = copy._isSigned;
+	return (*this);
+}
 
 std::string	Form::getName() const
 {
