@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:23:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:43:49 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 18:06:07 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
-#include <iostream>
 
 int main()
 {
-	//Animal	*meta = new Animal();
+	Animal	*meta = new Animal();
 	Animal	*j = new Dog();
 	Animal	*i = new Cat();
-	//WrongAnimal *wrongMeta = new WrongAnimal();
+	WrongAnimal *wrongMeta = new WrongAnimal();
 	WrongAnimal *wrongI = new WrongCat();
 
 	std::cout << "Hi, I am a " << j->getType() << " " << std::endl;
@@ -34,10 +33,10 @@ int main()
 	std::cout << "Hi, I am a " << wrongI->getType() << " " << std::endl;
 	wrongI->makeSound();
 
-	//delete meta;
+	delete meta;
 	delete j;
 	delete i;
-	//delete wrongMeta;
+	delete wrongMeta;
 	delete wrongI;
 
 	return (0);

@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 09:22:47 by xli               #+#    #+#              #
-#    Updated: 2021/09/14 12:23:40 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/09/22 18:02:59 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS = Animal.cpp Dog.cpp Cat.cpp Brain.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o : %.cpp
+%.o : %.cpp $(INCLUDES)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:23:37 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 12:26:12 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 18:06:16 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "Brain.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include <iostream>
 
 int main()
 {
