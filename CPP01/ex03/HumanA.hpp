@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 16:20:33 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 13:17:13 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:57:49 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <iostream>
 # include "Weapon.hpp"
-
-class HumanA;
 
 class HumanA
 {

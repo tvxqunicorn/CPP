@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:53:13 by xli               #+#    #+#             */
-/*   Updated: 2021/09/03 16:31:11 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:57:46 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define WEAPON_HPP
 
 # include <iostream>
-
-class Weapon;
 
 class Weapon
 {

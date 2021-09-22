@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 13:57:15 by xli               #+#    #+#             */
-/*   Updated: 2021/09/05 15:47:25 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:58:18 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define KAREN_HPP
 
 # include <iostream>
-
-class Karen;
 
 class Karen
 {
