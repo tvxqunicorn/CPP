@@ -6,10 +6,11 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:23:32 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 19:47:34 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 16:18:43 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 
 /*
@@ -21,13 +22,17 @@ FragTrap::FragTrap() : ClapTrap()
 	std::cout << "Default constructor from FragTrap called" << std::endl;
 	_name = "Alex";
 	_hitpoints = 100;
-	_energyPoints = 100;
+	//_energyPoints = 100;
 	_attackDamage = 30;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "String constructor from FragTrap called" << std::endl;
+	_name = name;
+	_hitpoints = 100;
+	//_energyPoints = 100;
+	_attackDamage = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)

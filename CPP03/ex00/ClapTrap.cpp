@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:33:01 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 14:55:21 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 15:00:36 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void		ClapTrap::takeDamage(unsigned int amount)
 	else
 		_energyPoints -= amount;
 }
+
 void		ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << _name << " has been repaired of " << amount << " points" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 19:45:03 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 09:17:35 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:24:21 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,21 @@ DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout << "Default constructor from DiamondTrap called" << std::endl;
 	_name = "Big Boss";
+	// _hitpoints = FragTrap::_hitpoints;
+	// _energyPoints = ScavTrap::_energyPoints;
+	// _attackDamage= FragTrap::_attackDamage;
+	// std::cout << _hitpoints << std::endl;
+	// std::cout << _energyPoints << std::endl;
+	// std::cout << _attackDamage << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(_name += "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(), ScavTrap(), FragTrap()
 {
 	std::cout << "String constructor from DiamondTrap called" << std::endl;
+	_name = name + "_clap_name";
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy) :ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy) : ScavTrap(copy), FragTrap(copy)
 {
 	std::cout << "Copy constructor from DiamondTrap called" << std::endl;
 }
@@ -36,7 +43,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy) :ClapTrap(copy), ScavTrap(copy
 ** -------------------- DESTRUCTOR --------------------
 */
 
-DiamondTrap::DiamondTrap()
+DiamondTrap::~DiamondTrap()
 {
 	std::cout << "Destructor from DiamondTrap called" << std::endl;
 }

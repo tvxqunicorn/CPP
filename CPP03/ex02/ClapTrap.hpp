@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:23:17 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 17:43:44 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 16:07:30 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define CLAPTRAP_HPP
 
 # include <iostream>
-
-class ClapTrap;
 
 class ClapTrap
 {

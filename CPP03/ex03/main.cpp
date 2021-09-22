@@ -6,25 +6,23 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:45:24 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 18:34:40 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/22 17:24:55 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
-	FragTrap	fragTrap1;
-	FragTrap	fragTrap2("Bille");
-	FragTrap	fragTrap3(fragTrap2);
+	DiamondTrap	diamondTrap1;
+	DiamondTrap	diamondTrap2("Bille");
+	DiamondTrap	diamondTrap3(diamondTrap2);
 
-	fragTrap1.attack("Carmen");
-	fragTrap1 = fragTrap3;
-	fragTrap1.attack("Harper");
-	fragTrap1.takeDamage(12);
-	fragTrap1.beRepaired(100);
-	fragTrap1.highFivesGuys();
+	diamondTrap1.attack("Carmen");
+	diamondTrap1 = diamondTrap3;
+	diamondTrap1.attack("Harper");
+	diamondTrap1.takeDamage(12);
+	diamondTrap1.beRepaired(100);
 
 	return (0);
 }
