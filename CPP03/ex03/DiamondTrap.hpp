@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 18:46:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:23:40 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 09:52:23 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap	&operator=(const DiamondTrap &copy);
 
 		void		whoAmI();
+		void		attack(std::string const &target);
 };
 
 #endif

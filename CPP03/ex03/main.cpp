@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 15:45:24 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:46:26 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 09:51:03 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
 	DiamondTrap	diamondTrap1;
-	DiamondTrap	diamondTrap2("Bille");
+	DiamondTrap	diamondTrap2("Billi");
 	DiamondTrap	diamondTrap3(diamondTrap2);
 
 	diamondTrap1.attack("Carmen");

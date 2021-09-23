@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:33:01 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 15:00:46 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 10:03:36 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,29 @@
 ** -------------------- CONSTRUCTOR --------------------
 */
 
-ClapTrap::ClapTrap() : _name("John"), _hitpoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap() :
+	_name("John"),
+	_hitpoints(10),
+	_energyPoints(10),
+	_attackDamage(0)
 {
 	std::cout << "Default constructor from ClapTrap called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitpoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(std::string name) :
+	_name(name),
+	_hitpoints(10),
+	_energyPoints(10),
+	_attackDamage(0)
 {
 	std::cout << "String constructor from ClapTrap called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap &copy) : _name(copy._name), _hitpoints(copy._hitpoints), _energyPoints(copy._energyPoints), _attackDamage(copy._attackDamage)
+ClapTrap::ClapTrap(const ClapTrap &copy) :
+	_name(copy._name),
+	_hitpoints(copy._hitpoints),
+	_energyPoints(copy._energyPoints),
+	_attackDamage(copy._attackDamage)
 {
 	std::cout << "Copy constructor from ClapTrap called" << std::endl;
 }
