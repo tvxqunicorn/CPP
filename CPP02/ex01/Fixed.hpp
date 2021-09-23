@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:27:43 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:59:46 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 10:30:59 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class Fixed
 {
 	private:
-		int					_fixed_point;
-		static const int	_frac_bits = 8;
+		int					_value;
+		static const int	_fracBits = 8;
 
 	public:
 		Fixed();
@@ -36,6 +36,6 @@ class Fixed
 		int		toInt(void) const;
 	};
 
-std::ostream &operator<<(std::ostream &o, const Fixed &srcs);
+std::ostream &operator<<(std::ostream &os, const Fixed &srcs);
 
 #endif

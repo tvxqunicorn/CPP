@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:32:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 12:09:50 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 10:33:06 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
 
 Fixed::Fixed()
 {
-	_fixed_point = 0;
+	_value = 0;
 }
 
 Fixed::Fixed(const int N)
 {
-	_fixed_point = N << _frac_bits;
+	_value = N << _fracBits;
 }
 
 Fixed::Fixed(const float F)
 {
-	_fixed_point = (int)roundf(F * (float)(1 << _frac_bits));
+	_value = (int)roundf(F * (float)(1 << _fracBits));
 }
 
 Fixed::Fixed(const Fixed &copy)
@@ -48,12 +48,12 @@ Fixed::~Fixed() {}
 
 void	Fixed::setRawBits(int const raw)
 {
-	_fixed_point = raw;
+	_value = raw;
 }
 
 int		Fixed::getRawBits(void) const
 {
-	return (_fixed_point);
+	return (_value);
 }
 
 /*
@@ -64,7 +64,7 @@ Fixed	&Fixed::operator=(const Fixed &copy)
 {
 	if (this == &copy)
 		return (*this);
-	_fixed_point = copy._fixed_point;
+	_value = copy._value;
 	return (*this);
 }
 
@@ -125,27 +125,27 @@ Fixed	Fixed::operator/(const Fixed &copy) const
 
 Fixed	&Fixed::operator++()
 {
-	_fixed_point++;
+	_value++;
 	return (*this);
 }
 
 Fixed	Fixed::operator++(int)
 {
 	Fixed copy(*this);
-	_fixed_point++;
+	_value++;
 	return (copy);
 }
 
 Fixed	&Fixed::operator--()
 {
-	_fixed_point--;
+	_value--;
 	return (*this);
 }
 
 Fixed	Fixed::operator--(int)
 {
 	Fixed copy(*this);
-	_fixed_point--;
+	_value--;
 	return (copy);
 }
 
@@ -155,12 +155,12 @@ Fixed	Fixed::operator--(int)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)_fixed_point / (float)(1 << _frac_bits));
+	return ((float)_value / (float)(1 << _fracBits));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (_fixed_point >> _frac_bits);
+	return (_value >> _fracBits);
 }
 
 Fixed	&Fixed::min(Fixed &f1, Fixed &f2)

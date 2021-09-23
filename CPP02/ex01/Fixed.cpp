@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:32:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/13 11:43:34 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 10:31:07 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
-	_fixed_point = 0;
+	_value = 0;
 }
 
 Fixed::Fixed(const int N)
 {
 	std::cout << "Int constructor called" << std::endl;
-	_fixed_point = N << _frac_bits;
+	_value = N << _fracBits;
 }
 
 Fixed::Fixed(const float F)
 {
 	std::cout << "Float constructor called" << std::endl;
-	_fixed_point = (int)roundf(F * (float)(1 << _frac_bits));
+	_value = (int)roundf(F * (float)(1 << _fracBits));
 }
 
 Fixed::Fixed(const Fixed &copy)
@@ -46,33 +46,33 @@ Fixed	&Fixed::operator=(const Fixed &copy)
 	std::cout << "Assignation operator called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_fixed_point = copy.getRawBits();
+	_value = copy.getRawBits();
 	return (*this);
 }
 
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return (_fixed_point);
+	return (_value);
 }
 
 void	Fixed::setRawBits(int const raw)
 {
-	_fixed_point = raw;
+	_value = raw;
 }
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)_fixed_point / (float)(1 << _frac_bits));
+	return ((float)_value / (float)(1 << _fracBits));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (_fixed_point >> _frac_bits);
+	return (_value >> _fracBits);
 }
 
-std::ostream &operator<<(std::ostream &o, const Fixed &srcs)
+std::ostream &operator<<(std::ostream &os, const Fixed &srcs)
 {
-	o << srcs.toFloat();
-	return (o);
+	os << srcs.toFloat();
+	return (os);
 }

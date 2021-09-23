@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:27:43 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:59:42 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 10:15:42 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class Fixed
 {
 	private:
-		int					_fixed_point;
-		static const int	_frac_bits = 8;
+		int					_value;
+		static const int	_fracBits = 8;
 
 	public:
 		Fixed();
@@ -27,6 +27,7 @@ class Fixed
 		~Fixed();
 
 		Fixed	&operator=(const Fixed &copy);
+
 		int		getRawBits(void) const;
 		void	setRawBits(const int raw);
 };
