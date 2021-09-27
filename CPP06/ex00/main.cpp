@@ -6,14 +6,14 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 10:37:04 by xli               #+#    #+#             */
-/*   Updated: 2021/09/24 13:35:49 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/27 09:08:21 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cmath>
 
-double	toConvert(char *str) //char, int, float, double
+double	toConvert(char *str) //from str to double (double can store int, but not verse vesa)
 {
 	bool	isValid = true;
 	bool	isNegetive = false;
@@ -45,14 +45,17 @@ double	toConvert(char *str) //char, int, float, double
 	if (isValid == true && isPoint == true && isFloat == false)
 		return (static_cast<double>(atof(str)));
 	//impossible for everyone
-	std::cout << "char: impossible" << std::endl
+	else
+	{
+		std::cout << "char: impossible" << std::endl
 			<< "int: impossible" << std::endl
-			<< "float: double" << std::endl
-			<< "double: double" << std::endl;
-	return (42.f);
+			<< "float: impossible" << std::endl
+			<< "double: impossible" << std::endl;
+		exit(1);
+	}
 }
 
-void	toOutput(double input)
+void	toOutput(double input) //from double to char, int, float and double
 {
 	//char
 	if (isprint(static_cast<char>(input)))
@@ -69,14 +72,13 @@ void	toOutput(double input)
 	std::cout << "double: " << static_cast<double>(input) << ".0" << std::endl;
 }
 
-
 void	exceptions(std::string const &str)
 {
 	std::cout << "char: impossible" << std::endl
 			<< "int: impossible" << std::endl
 			<< "float: " << str << "f" << std::endl
 			<< "double: " << str << std::endl;
-	exit(1);
+	exit(0);
 }
 
 int	main(int ac, char **av)
