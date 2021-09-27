@@ -1,0 +1,3 @@
+static_cast : general cases
+reinterpret_cast : ptr to ptr, ptr to int, int to ptr
+dynamic_cast : base class to derived class
