@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 18:46:19 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/27 10:59:07 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,7 @@ Form::Form(const Form &copy) :
 	_name(copy._name),
 	_isSigned(copy._isSigned),
 	_signGrade(copy._signGrade),
-	_execGrade(copy._execGrade)
-{
-	// if (copy._signGrade < 1 || copy._execGrade < 1)
-	// 	throw (GrandTooHighException());
-	// if (copy._signGrade > 150 || copy._execGrade > 150)
-	// 	throw (GrandTooLowException());
-}
+	_execGrade(copy._execGrade) {}
 
 Form::~Form() {}
 
@@ -42,10 +36,6 @@ Form	&Form::operator=(const Form &copy)
 {
 	if (this == &copy)
 		return (*this);
-	// if (copy._signGrade < 1 || copy._execGrade < 1)
-	// 	throw (GrandTooHighException());
-	// if (copy._signGrade > 150 || copy._execGrade > 150)
-	// 	throw (GrandTooLowException());
 	_isSigned = copy._isSigned;
 	return (*this);
 }

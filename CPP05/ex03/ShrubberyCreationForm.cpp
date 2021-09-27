@@ -6,13 +6,13 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 10:40:22 by xli               #+#    #+#             */
-/*   Updated: 2021/09/20 16:26:51 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 09:19:54 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-//ShrubberyCreationForm::ShrubberyCreationForm() {}
+ShrubberyCreationForm::ShrubberyCreationForm() {}
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : Form(target, 145, 137), _target(target) {}
 

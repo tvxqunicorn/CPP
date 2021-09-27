@@ -6,16 +6,14 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/21 10:19:28 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 09:20:43 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-//Form::Form() {} //???
-
 Form::Form(const std::string name, const int signGrade, const int execGrade) :
-	_name(name), //???
+	_name(name),
 	_isSigned(false),
 	_signGrade(signGrade),
 	_execGrade(execGrade)
@@ -27,31 +25,20 @@ Form::Form(const std::string name, const int signGrade, const int execGrade) :
 }
 
 Form::Form(const Form &copy) :
-	_name(copy._name), //???
+	_name(copy._name),
 	_isSigned(copy._isSigned),
 	_signGrade(copy._signGrade),
-	_execGrade(copy._execGrade)
-{
-	if (copy._signGrade < 1 || copy._execGrade < 1)
-		throw (GrandTooHighException());
-	if (copy._signGrade > 150 || copy._execGrade > 150)
-		throw (GrandTooLowException());
-}
+	_execGrade(copy._execGrade) {}
 
 Form::~Form() {}
 
-// Form	&Form::operator=(const Form &copy) //???
-// {
-// 	if (this == &copy)
-// 		return (*this);
-// 	if (copy._signGrade < 1 || copy._execGrade < 1)
-// 		throw (GrandTooHighException());
-// 	if (copy._signGrade > 150 || copy._execGrade > 150)
-// 		throw (GrandTooLowException());
-// 	_signGrade = copy._signGrade;
-// 	_execGrade = copy._execGrade;
-// 	return (*this);
-// }
+Form	&Form::operator=(const Form &copy)
+{
+	if (this == &copy)
+		return (*this);
+	_isSigned = copy._isSigned;
+	return (*this);
+}
 
 std::string	Form::getName() const
 {
@@ -79,7 +66,7 @@ void	Form::beSigned(Bureaucrat &bureau)
 		return ;
 	if (bureau.getGrade() > _signGrade)
 	{
-		throw (Bureaucrat::GradeTooLowException()); //why Bureaucrat?
+		throw (Bureaucrat::GradeTooLowException());
 	}
 	_isSigned = true;
 }

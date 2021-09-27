@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:33:53 by xli               #+#    #+#             */
-/*   Updated: 2021/09/21 10:19:33 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/23 09:18:15 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ class Form
 		Form();
 		Form(const std::string name, const int signGrade, const int execGrade);
 		Form(const Form &copy);
-		virtual ~Form(); //???
+		virtual ~Form();
 
-		//Form &operator=(const Form &copy);
+		Form &operator=(const Form &copy);
 
 		std::string		getName() const;
 		bool			getSigned() const;
