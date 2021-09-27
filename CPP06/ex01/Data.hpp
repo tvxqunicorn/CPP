@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 17:23:29 by xli               #+#    #+#             */
-/*   Updated: 2021/09/24 17:41:13 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/09/27 10:56:21 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 # include <iostream>
 # include <cmath>
 
-struct Data
-{
-};
+struct Data {};
 
 uintptr_t	serialize(Data* ptr);
 Data		*deserialize(uintptr_t raw);
