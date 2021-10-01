@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/03 11:26:24 by xli               #+#    #+#              #
-#    Updated: 2021/09/22 13:10:15 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/10/01 16:59:53 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Zombie
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 INCLUDES = Zombie.hpp
 

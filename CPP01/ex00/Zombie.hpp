@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:27:09 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:57:13 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/01 16:59:03 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ class Zombie
 	private:
 		std::string	_name;
 };
+
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

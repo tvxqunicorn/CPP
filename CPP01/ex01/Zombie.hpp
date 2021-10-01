@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:27:09 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 17:57:28 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/01 18:06:52 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,12 @@ class Zombie
 		~Zombie();
 
 		void	announce();
+		void	setName(std::string name);
 
 	private:
 		std::string	_name;
 };
+
+Zombie	*zombieHorde(int N, std::string name);
 
 #endif

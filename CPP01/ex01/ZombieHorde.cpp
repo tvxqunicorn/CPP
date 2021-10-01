@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 12:06:05 by xli               #+#    #+#             */
-/*   Updated: 2021/09/03 15:09:41 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/01 18:09:13 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,7 @@ Zombie	*zombieHorde(int N, std::string name)
 
 	for (int i = 0; i < N; i++)
 	{
-		Zombie *zombie = new Zombie(name);
-		horde[i] = *zombie;
+		horde[i].setName(name);
 	}
 	return (horde);
 }
