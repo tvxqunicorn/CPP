@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:54:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 09:20:43 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/01 14:49:59 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	Form::beSigned(Bureaucrat &bureau)
 		return ;
 	if (bureau.getGrade() > _signGrade)
 	{
-		throw (Bureaucrat::GradeTooLowException());
+		throw (GrandTooLowException());
 	}
 	_isSigned = true;
 }
@@ -77,7 +77,7 @@ void	Form::excute(Bureaucrat const &executor) const
 		throw (FormNotSigned());
 	if (executor.getGrade() > _execGrade)
 	{
-		throw (Bureaucrat::GradeTooLowException());
+		throw (GrandTooLowException());
 	}
 	action();
 }
