@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:27:09 by xli               #+#    #+#             */
-/*   Updated: 2021/10/01 18:06:52 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/02 15:33:58 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ZOMBIE_HPP
 
 # include <iostream>
+# include <cstdlib>
 
 class Zombie
 {
