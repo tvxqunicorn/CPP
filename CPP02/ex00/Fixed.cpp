@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 11:32:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 10:28:28 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/04 11:57:47 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Fixed::Fixed(const Fixed &copy)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = copy;
-	//_value = copy._value; why not?
 }
 
 Fixed::~Fixed()
