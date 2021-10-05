@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:23:17 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 16:05:12 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/05 12:09:12 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class ClapTrap
 
 		ClapTrap	&operator=(const ClapTrap &copy);
 
+		std::string	getName() const;
+		void		setName(std::string const name);
 		void		attack(std::string const &target);
 		void		takeDamage(unsigned amount);
 		void		beRepaired(unsigned amount);

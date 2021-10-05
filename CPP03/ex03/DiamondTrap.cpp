@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 19:45:03 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 10:09:02 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/05 12:11:36 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap()
 {
 	std::cout << "Default constructor from DiamondTrap called" << std::endl;
-	_name = "Big Boss";
-	_hitpoints = FragTrap::_hitpoints;
-	_energyPoints = ScavTrap::_energyPoints;
-	_attackDamage= FragTrap::_attackDamage;
+	// _name = "Big Boss";
+	// _hitpoints = FragTrap::_hitpoints;
+	// _energyPoints = ScavTrap::_energyPoints;
+	// _attackDamage= FragTrap::_attackDamage;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name)
 {
 	std::cout << "String constructor from DiamondTrap called" << std::endl;
 	_name = name;
@@ -37,7 +37,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), Scav
 DiamondTrap::DiamondTrap(const DiamondTrap &copy)
 {
 	std::cout << "Copy constructor from DiamondTrap called" << std::endl;
-	_name = copy._name;
+	setName(copy.getName());
 	_hitpoints = copy._hitpoints;
 	_energyPoints = copy._energyPoints;
 	_attackDamage = copy._attackDamage;
@@ -61,7 +61,7 @@ DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &copy)
 	std::cout << "Assignation operator from DiamondTrap called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_name = copy._name;
+	setName(copy.getName());
 	_hitpoints = copy._hitpoints;
 	_energyPoints = copy._energyPoints;
 	_attackDamage = copy._attackDamage;
@@ -74,7 +74,7 @@ DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &copy)
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "My DiamondTrap name is : " << _name << std::endl;
+	std::cout << "My DiamondTrap name is : " << getName() << std::endl;
 	std::cout << "My ClapTrap name is    : " << ClapTrap::_name + "_clap_name" << std::endl;
 }
 

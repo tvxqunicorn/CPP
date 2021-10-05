@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:33:01 by xli               #+#    #+#             */
-/*   Updated: 2021/10/05 08:42:58 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/05 12:09:15 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,16 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
 /*
 ** -------------------- MEMBER FUNCTIONS --------------------
 */
+
+std::string	ClapTrap::getName() const
+{
+	return (_name);
+}
+
+void	ClapTrap::setName(std::string const name)
+{
+	_name = name;
+}
 
 void	ClapTrap::attack(std::string const &target)
 {
