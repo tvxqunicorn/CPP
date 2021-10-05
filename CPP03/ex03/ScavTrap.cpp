@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 17:32:06 by xli               #+#    #+#             */
-/*   Updated: 2021/09/22 15:14:53 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/05 08:43:33 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &copy)
 ** -------------------- MEMBER FUNCTIONS --------------------
 */
 
-void		ScavTrap::guardGate()
+void	ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap have enterred in Gate keeper mode" << std::endl;
 }

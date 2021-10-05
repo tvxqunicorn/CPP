@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 12:33:01 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 10:04:17 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/05 08:42:25 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,13 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &copy)
 ** -------------------- MEMBER FUNCTIONS --------------------
 */
 
-void		ClapTrap::attack(std::string const &target)
+void	ClapTrap::attack(std::string const &target)
 {
 	std::cout << _name << " attack " << target << ", causing "
 			<< _hitpoints << " points of damage!" << std::endl;
 }
 
-void		ClapTrap::takeDamage(unsigned int amount)
+void	ClapTrap::takeDamage(unsigned int amount)
 {
 	std::cout << _name << " takes " << amount << " points of damage!" << std::endl;
 	if (_energyPoints <= amount)
@@ -90,7 +90,7 @@ void		ClapTrap::takeDamage(unsigned int amount)
 		_energyPoints -= amount;
 }
 
-void		ClapTrap::beRepaired(unsigned int amount)
+void	ClapTrap::beRepaired(unsigned int amount)
 {
 	std::cout << _name << " has been repaired of " << amount << " points" << std::endl;
 	_energyPoints += amount;
