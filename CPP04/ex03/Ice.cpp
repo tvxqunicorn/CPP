@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:51:12 by xli               #+#    #+#             */
-/*   Updated: 2021/09/30 16:43:46 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:00:16 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ AMateria	*Ice::clone() const
 	return (ice);
 }
 
-void		Ice::use(ICharacter &target)
+void	Ice::use(ICharacter &target)
 {
 	std::cout << "Ice: \"* shoots an ice bolt at " << target.getName() << " *\"" << std::endl;
 }

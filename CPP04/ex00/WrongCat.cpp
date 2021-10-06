@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:59:18 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:42:18 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:19:16 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ WrongCat	&WrongCat::operator=(const WrongCat &copy)
 	std::cout << "Assignation operator from WrongCat called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_type = copy._type;
+	_type = copy.getType();
 	return (*this);
 }
 

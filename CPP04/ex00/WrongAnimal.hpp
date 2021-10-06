@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:51:58 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 10:58:46 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:19:07 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class WrongAnimal
 
 		std::string		getType() const;
 		void			setType(std::string type);
-		virtual void	makeSound();
+		void			makeSound();
 };
 
 #endif

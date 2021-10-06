@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 11:13:13 by xli               #+#    #+#             */
-/*   Updated: 2021/09/30 16:30:46 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 14:56:55 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Character : public ICharacter
 		AMateria	*_slot[4];
 		std::string	_name;
 		int			_materiaAmount;
+		Character();
 
 	public:
-		Character();
 		Character(std::string name);
 		Character(const Character &copy);
 		virtual ~Character();

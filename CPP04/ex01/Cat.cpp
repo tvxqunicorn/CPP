@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:49:51 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 12:05:58 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:26:12 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ Cat::Cat() : Animal()
 	std::cout << "Default constructor from Cat called" << std::endl;
 }
 
-Cat::Cat(const Cat &copy) : Animal(copy)
+Cat::Cat(const Cat &copy) //DEEP COPY
 {
+	_brain = new Brain();
+	*this = copy;
 	std::cout << "Copy constructor from Cat called" << std::endl;
 }
 
@@ -44,12 +46,13 @@ Cat::~Cat()
 ** -------------------- OVERLOADING --------------------
 */
 
-Cat	&Cat::operator=(const Cat &copy)
+Cat	&Cat::operator=(const Cat &copy) //DEEP COPY
 {
 	std::cout << "Assignation operator from Cat called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_type = copy._type;
+	_type = copy.getType();
+	*_brain = *copy._brain;
 	return (*this);
 }
 

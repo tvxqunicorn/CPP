@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:42:48 by xli               #+#    #+#             */
-/*   Updated: 2021/09/14 11:41:47 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:18:47 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Dog	&Dog::operator=(const Dog &copy)
 	std::cout << "Assignation operator from Dog called" << std::endl;
 	if (this == &copy)
 		return (*this);
-	_type = copy._type;
+	_type = copy.getType();
 	return (*this);
 }
 

@@ -6,18 +6,11 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 11:19:01 by xli               #+#    #+#             */
-/*   Updated: 2021/09/30 16:42:09 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 15:08:39 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-
-Character::Character()
-{
-	_materiaAmount = 0;
-	for (int i = 0; i < 4; i++)
-		_slot[i] = NULL;
-}
 
 Character::Character(std::string name)
 {
@@ -27,9 +20,15 @@ Character::Character(std::string name)
 		_slot[i] = NULL;
 }
 
-Character::Character(const Character &copy)
+Character::Character(const Character &copy) //DEEP COPY
 {
-	*this = copy;
+	//*this = copy;
+	_name = copy._name;
+	_materiaAmount = copy._materiaAmount;
+	for (int i = 0; i < 4; i++)
+		_slot[i] = NULL;
+	for (int i = 0; i < _materiaAmount; i++)
+		_slot[i] = copy._slot[i]->clone();
 }
 
 Character::~Character()
@@ -41,14 +40,19 @@ Character::~Character()
 	}
 }
 
-Character	&Character::operator=(const Character &copy)
+Character	&Character::operator=(const Character &copy) //DEEP COPY
 {
 	if (this == &copy)
 		return (*this);
-	for (int i = 0; i < 4; i++)
-		_slot[i] = copy._slot[i];
-	_name = copy._name;
+	for (int i = 0; i < _materiaAmount; i++)
+	{
+		delete _slot[i];
+		_slot[i] = NULL;
+	}
+	_name = copy.getName();
 	_materiaAmount = copy._materiaAmount;
+	for (int i = 0; i < _materiaAmount; i++)
+		_slot[i] = copy._slot[i]->clone();
 	return (*this);
 }
 
