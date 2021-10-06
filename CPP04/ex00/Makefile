@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/14 09:22:47 by xli               #+#    #+#              #
-#    Updated: 2021/09/22 18:01:11 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/10/06 10:05:56 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Animal
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 INCLUDES = Animal.hpp WrongAnimal.hpp Dog.hpp Cat.hpp WrongCat.hpp
 

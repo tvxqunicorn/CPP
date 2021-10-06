@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 14:59:21 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 12:01:38 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/06 10:39:04 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class AMateria
 
 		AMateria &operator=(const AMateria &copy);
 
-		std::string			const &getType() const; //why &?
+		std::string			const &getType() const;
 		virtual AMateria	*clone() const = 0;
 		virtual void		use(ICharacter &target);
 };
