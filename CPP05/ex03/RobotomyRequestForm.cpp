@@ -6,13 +6,11 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:27:15 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 09:20:01 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/08 10:10:43 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
-
-RobotomyRequestForm::RobotomyRequestForm() {}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target) : Form(target, 72, 45), _target(target)
 {

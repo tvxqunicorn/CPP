@@ -6,13 +6,11 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:35:32 by xli               #+#    #+#             */
-/*   Updated: 2021/09/23 09:20:05 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/08 10:10:11 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
-
-PresidentialPardonForm::PresidentialPardonForm() {}
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form(target, 25, 5), _target(target)
 {
