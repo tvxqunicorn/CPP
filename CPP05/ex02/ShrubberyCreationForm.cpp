@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 10:40:22 by xli               #+#    #+#             */
-/*   Updated: 2021/10/08 10:08:24 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/11 13:32:31 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ShrubberyCreationForm::action() const
 {
 	std::ofstream	outfile;
 
-	outfile.open((getName() + "_shrubbery"), std::ios::out | std::ios::trunc);
+	outfile.open(((getName() + "_shrubbery").c_str()), std::ios::out | std::ios::trunc);
 	outfile <<
 	"  888 \n"
 	"  888 \n"

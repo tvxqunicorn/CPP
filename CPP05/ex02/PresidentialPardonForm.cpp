@@ -6,27 +6,20 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 16:35:32 by xli               #+#    #+#             */
-/*   Updated: 2021/10/08 10:08:36 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/11 13:33:12 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form(target, 25, 5), _target(target)
-{
-	srand(time(NULL));
-}
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target) : Form(target, 25, 5), _target(target) {}
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy) : Form(copy)
-{
-	srand(time(NULL));
-}
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &copy) : Form(copy) {}
 
 PresidentialPardonForm::~PresidentialPardonForm() {}
 
 PresidentialPardonForm &PresidentialPardonForm::operator=(const PresidentialPardonForm &copy)
 {
-	srand(time(NULL));
 	_target = copy._target;
 	return (*this);
 }
