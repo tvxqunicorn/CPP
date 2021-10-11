@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 09:23:37 by xli               #+#    #+#             */
-/*   Updated: 2021/10/06 10:35:51 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/11 12:42:26 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,14 @@ int main()
 	cat.haveIdeas();
 	std::cout << "(" << &copycat << ")" << std::endl;
 	copycat.haveIdeas();
+
+	Dog	dog;
+	Dog	copydog(dog);
+
+	std::cout << "(" << &dog << ")" << std::endl;
+	dog.haveIdeas();
+	std::cout << "(" << &copydog << ")" << std::endl;
+	copydog.haveIdeas();
 
 	return (0);
 }
