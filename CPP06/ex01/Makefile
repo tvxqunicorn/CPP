@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/24 17:12:02 by xli               #+#    #+#              #
-#    Updated: 2021/09/24 17:41:33 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/10/06 13:13:39 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Serialization
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 INCLUDES = Data.hpp
 

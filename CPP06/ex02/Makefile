@@ -6,7 +6,7 @@
 #    By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/24 17:12:02 by xli               #+#    #+#              #
-#    Updated: 2021/09/27 10:47:08 by xli              ###   ########lyon.fr    #
+#    Updated: 2021/10/11 17:02:21 by xli              ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@ NAME = Identify
 
 CXX = clang++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Base.hpp A.hpp B.hpp C.hpp
+INCLUDES = Base.hpp
 
-SRCS = main.cpp Base.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

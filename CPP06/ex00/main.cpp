@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 10:37:04 by xli               #+#    #+#             */
-/*   Updated: 2021/09/27 09:08:21 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/11 15:45:05 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,34 @@
 
 double	toConvert(char *str) //from str to double (double can store int, but not verse vesa)
 {
-	bool	isValid = true;
 	bool	isNegetive = false;
+	bool	isNumeric = true;
 	bool	isPoint = false;
 	bool	isFloat = false;
 
 	//parsing
-	for (int i = 0; str[i]; ++i)
+	for (int i = 0; str[i]; i++)
 	{
 		if (i == 0 && str[i] == '-')
 			isNegetive = true;
 		else if (!isdigit(str[0]))
-			isValid = false;
+			isNumeric = false;
 		else if (str[i] == '.')
 			isPoint = true;
 		else if (i == (int)strlen(str) - 1 && str[i] == 'f')
 			isFloat = true;
 	}
 	//char
-	if (strlen(str) == 1 && !isdigit(str[0]))
+	if (isNumeric == false && strlen(str) == 1)
 		return (static_cast<double>(str[0]));
 	//int
-	if (isValid == true && isPoint == false && isFloat == false)
+	if (isNumeric == true && isPoint == false && isFloat == false)
 		return (static_cast<double>(atoi(str)));
 	//float
-	if (isValid == true && isPoint == true && isFloat == true)
+	if (isNumeric == true && isPoint == true && isFloat == true)
 		return (static_cast<double>(atof(str)));
 	//double
-	if (isValid == true && isPoint == true && isFloat == false)
+	if (isNumeric == true && isPoint == true && isFloat == false)
 		return (static_cast<double>(atof(str)));
 	//impossible for everyone
 	else
@@ -58,11 +58,11 @@ double	toConvert(char *str) //from str to double (double can store int, but not 
 void	toOutput(double input) //from double to char, int, float and double
 {
 	//char
-	if (isprint(static_cast<char>(input)))
+	if (isprint(static_cast<char>(input))) //ascii and printable eg. 50
 		std::cout << "char: \'" << static_cast<char>(input) << "\'"<< std::endl;
-	else if (isascii(static_cast<char>(input)))
+	else if (isascii(static_cast<char>(input))) //ascii non-printable eg. 31
 		std::cout << "char: non displayable" << std::endl;
-	else
+	else //non-ascii eg. 500
 		std::cout << "char: impossible" << std::endl;
 	//int
 	std::cout << "int: " << static_cast<int>(input) << std::endl;
