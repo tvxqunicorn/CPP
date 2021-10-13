@@ -6,12 +6,13 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 10:37:04 by xli               #+#    #+#             */
-/*   Updated: 2021/10/11 15:45:05 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/13 14:49:32 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cmath>
+#include <cstring>
 
 double	toConvert(char *str) //from str to double (double can store int, but not verse vesa)
 {
@@ -66,10 +67,17 @@ void	toOutput(double input) //from double to char, int, float and double
 		std::cout << "char: impossible" << std::endl;
 	//int
 	std::cout << "int: " << static_cast<int>(input) << std::endl;
-	//float
-	std::cout << "float: " << static_cast<float>(input) << ".0f" << std::endl;
-	//double
-	std::cout << "double: " << static_cast<double>(input) << ".0" << std::endl;
+	//float & double
+	if (std::abs(input - floor(input)) <= 1e-6) //???
+	{
+		std::cout << "float: " << static_cast<int>(input) << ".0f" << std::endl;
+		std::cout << "double: " << static_cast<int>(input) << ".0" << std::endl;
+	}
+	else
+	{
+		std::cout << "float: " << static_cast<float>(input) << "f" << std::endl;
+		std::cout << "double: " << input << std::endl;
+	}
 }
 
 void	exceptions(std::string const &str)

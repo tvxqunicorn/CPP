@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 09:13:03 by xli               #+#    #+#             */
-/*   Updated: 2021/10/11 17:01:47 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/13 14:51:05 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <ctime>
+# include <cstdlib>
 
 class Base
 {
