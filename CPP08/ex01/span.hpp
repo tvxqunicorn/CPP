@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 12:11:12 by xli               #+#    #+#             */
-/*   Updated: 2021/09/30 13:49:27 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/13 13:31:38 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,41 @@ class span
 	public:
 		span();
 		span(unsigned size);
+		span(const span &copy);
+		span &operator=(const span &copy);
 		virtual ~span();
 
-		span &operator=(const span &copy);
-
 		void		addNumber(int num);
-		template<typename it>
-		void		addNumber(it begin, it end);
 		int			shortestSpan() const;
 		int			longestSpan() const;
 		void		display() const;
+
+		template<typename it>
+		void		addNumber(it begin, it end); //adding numbers by passing a range of iter
 
 		class	SpanIsFull : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();
 		};
+
 		class	NoSpanToFind : public std::exception
 		{
 			public:
 				virtual const char *what() const throw();
 		};
 };
+
+template <typename it>
+void	span::addNumber(it begin, it end)
+{
+	if (std::distance(begin, end) + _nums.size() > _size)
+		throw (SpanIsFull());
+	while (begin != end)
+	{
+		addNumber(*begin);
+		begin++;
+	}
+}
 
 #endif

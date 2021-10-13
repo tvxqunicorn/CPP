@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 10:30:45 by xli               #+#    #+#             */
-/*   Updated: 2021/09/30 15:39:35 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/13 13:33:12 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,12 @@ span::span(unsigned size)
 	_max = 0;
 }
 
-span::~span() {}
+span::span(const span &copy)
+{
+	_size = copy._size;
+	_min = copy._min;
+	_max = copy._max;
+}
 
 span	&span::operator=(const span &copy)
 {
@@ -31,11 +36,14 @@ span	&span::operator=(const span &copy)
 	return (*this);
 }
 
+span::~span() {}
+
 void	span::addNumber(int num) //???
 {
-	if (_nums.size() == _size) //containers size = max size
+	if (_nums.size() == _size)
 		throw (SpanIsFull());
-	std::multiset<int>::iterator it = _nums.lower_bound(num), it2;
+	std::multiset<int>::iterator it = _nums.lower_bound(num);
+	std::multiset<int>::iterator it2;
 	if (it != _nums.end())
 		_min = std::min(_min, *it - num);
 	if (it != _nums.begin())
@@ -48,18 +56,6 @@ void	span::addNumber(int num) //???
 	it--;
 	it2 = _nums.begin();
 	_max = std::max(_max, *it - *it2);
-}
-
-template <typename it>
-void	span::addNumber(it begin, it end)
-{
-	if (std::distance(begin, end) + _nums.size() > _size)
-		throw (SpanIsFull());
-	while (begin != end)
-	{
-		addNumber(*begin);
-		begin++;
-	}
 }
 
 int	span::shortestSpan() const
