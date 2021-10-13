@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:23:09 by xli               #+#    #+#             */
-/*   Updated: 2021/09/28 15:44:01 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/13 15:39:18 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,59 +18,68 @@ int main()
 	std::cout << "----------Array of int----------" << std::endl;
 	Array<int> arr0;
 	Array<int> arr1(5);
+
 	srand(time(NULL));
 	for (int i = 0; i < 5; i++)
 		arr1[i] = rand() % 5;
+
 	Array<int> arr2(arr1);
 	Array<int> arr3 = arr2;
-	std::cout << arr3 << std::endl;
+
+	//std::cout << arr2 << std::endl;
+	std::cout << arr3;
 	std::cout << "The number of elements is " << arr3.size() << std::endl;
-	std::cout << std::endl;
+	std::cout << "Replacing... " << std::endl;
 	try
 	{
 		arr3[3] = 3;
-		std::cout << arr3 << std::endl;
+		//std::cout << arr2 << std::endl;
+		std::cout << arr3;
 	}
 	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << "Replacing again... " << std::endl;
 	try
 	{
 		arr3[6] = 6;
-		std::cout << arr3 << std::endl;
+		std::cout << arr3;
 	}
 	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	std::cout << std::endl;
 
 	std::cout << "----------Array of string----------" << std::endl;
 
 	Array<std::string> arr4;
 	Array<std::string> arr5(3);
+
 	srand(time(NULL));
 	for (int i = 0; i < 3; i++)
 		arr5[i] = "string" + std::to_string(rand() % 3);
+
 	Array<std::string> arr6(arr5);
 	Array<std::string> arr7 = arr6;
-	std::cout << arr7 << std::endl;
-	std::cout << "The number of elements is " << arr3.size() << std::endl;
-	std::cout << std::endl;
+
+	std::cout << arr7;
+	std::cout << "The number of elements is " << arr7.size() << std::endl;
+	std::cout << "Replacing... " << std::endl;
 	try
 	{
-		arr5[1] = "string1" ;
-		std::cout << arr5 << std::endl;
+		arr7[1] = "string1";
+		std::cout << arr7;
 	}
 	catch(const std::exception &e)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << "Replacing again... " << std::endl;
 	try
 	{
-		arr5[4] = "string4";
-		std::cout << arr5 << std::endl;
+		arr7[4] = "string4";
+		std::cout << arr7;
 	}
 	catch(const std::exception &e)
 	{
