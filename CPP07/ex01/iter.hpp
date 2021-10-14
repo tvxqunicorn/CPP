@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 12:09:42 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 15:01:36 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/14 16:45:22 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <iostream>
 
 template <typename T>
-void	iter(T *addr, int len, void(* f)(T &))
+void	iter(T *addr, int len, void(* f)(T const &))
 {
-	if (addr == NULL || len < 0)
+	if (addr == NULL || len < 0 || f == NULL)
 		return ;
 	for (int i = 0; i < len; i++)
 		f(addr[i]);

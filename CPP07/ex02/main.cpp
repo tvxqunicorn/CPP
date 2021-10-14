@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 13:23:09 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 15:39:18 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/14 16:44:32 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@ int main()
 	Array<int> arr0;
 	Array<int> arr1(5);
 
+	std::cout << "Default int: " << std::endl;
+	std::cout << arr1 << std::endl;
+	
 	srand(time(NULL));
 	for (int i = 0; i < 5; i++)
 		arr1[i] = rand() % 5;
@@ -51,10 +54,16 @@ int main()
 		std::cerr << e.what() << std::endl;
 	}
 
+	//Array<int> const arr10(10);
+	//arr10[1] = 1; 
+	
 	std::cout << "----------Array of string----------" << std::endl;
 
 	Array<std::string> arr4;
 	Array<std::string> arr5(3);
+
+	std::cout << "Default string: " << std::endl;
+	std::cout << arr5 << std::endl;
 
 	srand(time(NULL));
 	for (int i = 0; i < 3; i++)

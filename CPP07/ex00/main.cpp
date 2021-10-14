@@ -6,13 +6,13 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 11:17:49 by xli               #+#    #+#             */
-/*   Updated: 2021/09/27 12:08:05 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/14 16:45:08 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
 
-int main( void ) //why adding :: before functions?
+int main( void )
 {
 	int a = 2;
 	int b = 3;

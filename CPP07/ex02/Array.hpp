@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 12:02:33 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 15:35:48 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/14 16:42:20 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ class Array
 		Array();
 		Array(unsigned n);
 		Array(Array<T> const &copy);
+		Array	&operator=(Array<T> const &copy);
+		T		&operator[](size_t i);
+		T		const &operator[](size_t i) const; //cannot modify
 		~Array();
 
-		Array	&operator=(Array<T> const &copy);
-		T		&operator[](size_t i) const;
 		class Exception: public std::exception
 		{
 			public:
@@ -52,7 +53,7 @@ Array<T>::Array()
 template <typename T>
 Array<T>::Array(unsigned n)
 {
-	_arr = new T[n];
+	_arr = new T[n](); //Init to default
 	_size = n;
 }
 
@@ -94,7 +95,15 @@ Array<T>	&Array<T>::operator=(Array<T> const &copy)
 }
 
 template <typename T>
-T	&Array<T>::operator[](size_t i) const
+T	&Array<T>::operator[](size_t i)
+{
+	if (i >= _size)
+		throw(Exception());
+	return (_arr[i]);
+}
+
+template <typename T>
+T	const &Array<T>::operator[](size_t i) const
 {
 	if (i >= _size)
 		throw(Exception());
