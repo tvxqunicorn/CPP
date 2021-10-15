@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 10:30:45 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 13:33:12 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/15 11:19:43 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,17 @@ span	&span::operator=(const span &copy)
 
 span::~span() {}
 
-void	span::addNumber(int num) //???
+void	span::addNumber(int num)
 {
 	if (_nums.size() == _size)
 		throw (SpanIsFull());
+	//in case of largest num, it = _nums.end();
+	//in case of smallest num, it = _nums.begin();
 	std::multiset<int>::iterator it = _nums.lower_bound(num);
 	std::multiset<int>::iterator it2;
-	if (it != _nums.end())
+	if (it != _nums.end()) //compare with right number
 		_min = std::min(_min, *it - num);
-	if (it != _nums.begin())
+	if (it != _nums.begin()) //compare with left number
 	{
 		it--;
 		_min = std::min(_min, num - *it);
