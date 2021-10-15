@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 13:09:45 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 11:30:10 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/15 14:25:21 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ int main()
 	try
 	{
 		span				testB(10001);
-		//span				testB(10000);
 		std::vector<int>	vec(10000, 3); //size, value
 
 		testB.addNumber(42);
-		testB.display();
 		testB.addNumber(vec.begin(), vec.end());
 		testB.display();
 		std::cout << "The shortest span is: " << testB.shortestSpan() << std::endl;
@@ -85,6 +83,6 @@ int main()
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	
+
 	return (0);
 }
