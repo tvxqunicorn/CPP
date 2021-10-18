@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 10:37:04 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 14:49:32 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/18 11:41:26 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	toOutput(double input) //from double to char, int, float and double
 	//int
 	std::cout << "int: " << static_cast<int>(input) << std::endl;
 	//float & double
-	if (std::abs(input - floor(input)) <= 1e-6) //???
+	if (std::abs(input - floor(input)) <= 1e-6) //or !fmod(input, static_cast<float>(1))
 	{
 		std::cout << "float: " << static_cast<int>(input) << ".0f" << std::endl;
 		std::cout << "double: " << static_cast<int>(input) << ".0" << std::endl;
