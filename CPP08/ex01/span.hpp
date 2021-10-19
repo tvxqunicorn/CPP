@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/29 12:11:12 by xli               #+#    #+#             */
-/*   Updated: 2021/10/13 13:31:38 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/19 09:18:49 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@ class span
 		int					_min;
 		int					_max;
 
-	public:
 		span();
-		span(unsigned size);
 		span(const span &copy);
 		span &operator=(const span &copy);
+
+	public:
+		span(unsigned size);
 		virtual ~span();
 
 		void		addNumber(int num);

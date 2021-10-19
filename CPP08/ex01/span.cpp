@@ -6,7 +6,7 @@
 /*   By: xli <xli@student.42lyon.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 10:30:45 by xli               #+#    #+#             */
-/*   Updated: 2021/10/15 11:19:43 by xli              ###   ########lyon.fr   */
+/*   Updated: 2021/10/18 14:02:19 by xli              ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,6 @@ span::span(unsigned size)
 	_size = size;
 	_min = 2147483647;
 	_max = 0;
-}
-
-span::span(const span &copy)
-{
-	_size = copy._size;
-	_min = copy._min;
-	_max = copy._max;
-}
-
-span	&span::operator=(const span &copy)
-{
-	if (this == &copy)
-		return (*this);
-	_size = copy._size;
-	_min = copy._min;
-	_max = copy._max;
-	return (*this);
 }
 
 span::~span() {}
